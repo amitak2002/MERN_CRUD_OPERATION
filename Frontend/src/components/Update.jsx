@@ -84,7 +84,7 @@ function Update() {
     <>
       <ToastContainer  position="top-center"/>
       <h1>Update Form</h1>
-      <form className="form" onSubmit={handleUpdate}>
+      <form className="form" onSubmit={(e) => handleUpdate(e)}>
         <div className="formdiv">
           <div className="formcontent">
             <label>Name: </label>
