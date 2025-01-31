@@ -12,7 +12,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended : true , limit : '16kb'}))
 
 
-// userROuter
+// user_Router
 import userRouter from './router/userRouter.js'
 import cookieParser from 'cookie-parser'
 app.use('/api/v1/user' , userRouter)

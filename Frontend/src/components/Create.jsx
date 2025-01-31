@@ -8,8 +8,7 @@ function Create() {
   const [password, setPassword] = useState("");
   const [gender, setGender] = useState("");
   const [age, setAge] = useState("");
-  const [error, setError] = useState("");
-
+  
   console.log(name, email, password, gender, age);
 
   const handleSubmit = async (e) => {
@@ -35,7 +34,6 @@ function Create() {
 
       if (!response.ok) {
         console.log("Error in Create.jsx:", result.error);
-        setError(result.message); // Corrected
         toast.error(result.message); // Corrected
         return;
       }
@@ -46,7 +44,6 @@ function Create() {
       setPassword("");
       setGender(""); // Corrected
       setAge("");
-      setError("");
 
       toast.success("Successfully submitted the form!");
     } catch (error) {
@@ -57,7 +54,8 @@ function Create() {
 
   return (
     <>
-      <ToastContainer />
+      <ToastContainer  position="top-center"/>
+      <h1>Add_New_Data</h1>
       <form className="form" onSubmit={handleSubmit}>
         <div className="formdiv">
           <div className="formcontent">
